@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rioblox Menu - 3 Game</title>
+    <style>
+        :root {
+            --bg-body: #05070a;
+            --bg-card: #11141b;
+            --bg-row: #161b22;
+            --text-blue: #58a6ff;
+            --text-gray: #8b949e;
+            --accent-red: #ff4d4d;
+        }
+
+        body {
+            background-color: var(--bg-body);
+            color: white;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* HEADER */
+        .web-header { text-align: center; padding: 60px 20px 30px; }
+        .web-title {
+            font-size: 3rem; margin: 0;
+            background: linear-gradient(to bottom, #fff, #58a6ff);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            text-shadow: 0 10px 20px rgba(88, 166, 255, 0.2);
+        }
+        .web-description { color: var(--text-gray); margin-top: 10px; }
+
+        /* TRANG CHỦ */
+        #home-screen { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; padding: 20px; }
+        .category-card {
+            width: 250px; height: 320px; background: var(--bg-card);
+            border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex; flex-direction: column; justify-content: center;
+            align-items: center; text-align: center; transition: 0.3s; padding: 20px; cursor: pointer;
+        }
+        .category-card:hover { border-color: var(--text-blue); transform: translateY(-10px); }
+
+        /* CHI TIẾT DANH MỤC */
+        .list-section { display: none; width: 95%; max-width: 600px; margin-top: 20px; padding-bottom: 50px; }
+        .header-area {
+            display: flex; justify-content: space-between; align-items: center;
+            margin-bottom: 20px; position: sticky; top: 0; background: var(--bg-body);
+            padding: 15px 0; z-index: 10;
+        }
+        .btn-exit {
+            background: rgba(255, 77, 77, 0.1); color: var(--accent-red);
+            border: 1px solid var(--accent-red); padding: 8px 15px; border-radius: 10px;
+            cursor: pointer; font-weight: bold;
+        }
+
+        /* DÒNG DỊCH VỤ */
+        .item-row {
+            background-color: var(--bg-row); padding: 18px 25px; border-radius: 15px;
+            display: flex; justify-content: space-between; align-items: center;
+            margin-bottom: 10px; border: 1px solid transparent;
+        }
+        .item-row:hover { border-color: #30363d; background-color: #1c2128; }
+        .service-name { font-size: 1.05rem; color: #f0f6fc; }
+        .service-price { color: var(--text-blue); font-weight: bold; font-size: 1.05rem; }
+    </style>
+</head>
+<body>
+
+    <header class="web-header" id="main-header">
+        <h1 class="web-title">RIOBLOX MENU</h1>
+        <p class="web-description">Rioblox – Dịch vụ cày thuê uy tín cho Blox Fruits, King Legacy và The Strongest Battlegrounds. Cày nhanh, an toàn, đúng yêu cầu – giá rẻ cho mọi game thủ! ⚡🎮</p>
+    </header>
+
+    <div id="home-screen">
+        <div class="category-card" onclick="openTab('vortex')">
+            <h2>Blox Fruit</h2>
+            <p>Dịch vụ cày thuê Blox Fruits uy tín – lên level nhanh, farm trái hiếm, thức tỉnh full – an toàn, giá hợp lý, nhận làm theo yêu cầu. ⚡</p>
+        </div>
+        <div class="category-card" onclick="openTab('phantom')">
+            <h2>King Legacy</h2>
+            <p>Dịch vụ cày thuê King Legacy uy tín – lên level nhanh, farm trái hiếm, thức tỉnh full, gem & beli đủ – an toàn, giá rẻ, làm theo yêu cầu. ⚡👑</p>
+        </div>
+        <div class="category-card" onclick="openTab('eclipse')">
+            <h2>Menu Blox Fruit Trang 2</h2>
+            <p>Các Dịch Vụ Khác Của Blox Fruit</p>
+        </div>
+    </div>
+
+    <div id="vortex-section" class="list-section">
+        <div class="header-area">
+            <h2 style="color:var(--text-blue)">Menu Blox Fruit</h2>
+            <button class="btn-exit" onclick="closeTab()">THOÁT</button>
+        </div>
+        <div class="item-row"><span class="service-name">Cày Từ Lv1-Max</span><span class="service-price">80k</span></div>
+        <div class="item-row"><span class="service-name">Cày Từ Lv700-Max</span><span class="service-price">60k</span></div>
+        <div class="item-row"><span class="service-name">Cày Từ Lv1500-Max</span><span class="service-price">40k</span></div>
+        <div class="item-row"><span class="service-name">Lấy Cdk (đã đủ kiếm và mas)</span><span class="service-price">40k</span></div>
+        <div class="item-row"><span class="service-name">Lấy Cdk (chưa có gì hết)</span><span class="service-price">60k</span></div>
+        <div class="item-row"><span class="service-name">Lấy Tushita</span><span class="service-price">20k</span></div>
+        <div class="item-row"><span class="service-name">Lấy Yama</span><span class="service-price">20k</span></div>
+        <div class="item-row"><span class="service-name">Lấy Tim Levi</span><span class="service-price">80k</span></div>
+        <div class="item-row"><span class="service-name">Lấy Võ Theo Yêu Cầu (đã đủ nguyên liệu cho võ đó)</span><span class="service-price">50k</span></div>
+        <div class="item-row"><span class="service-name">Lấy Võ Theo Yêu Cầu (chưa đủ nguyên liệu cho võ đó)</span><span class="service-price">70k</span></div>
+        <div class="item-row"><span class="service-name">Lấy Cyborg</span><span class="service-price">20k</span></div>
+        <div class="item-row"><span class="service-name">Lấy Ghoul</span><span class="service-price">20k</span></div>
+        <div class="item-row"><span class="service-name">Nâng v1-v3 tộc tùy bạn chọn (đã đủ beli)</span><span class="service-price">20k</span></div>
+        <div class="item-row"><span class="service-name">Nâng v1-v3 tộc tùy bạn chọn (Chưa đủ beli)</span><span class="service-price">40k</span></div>
+        <div class="item-row"><span class="service-name">Gạt cần (đã có mảnh gương,đã đánh rip)</span><span class="service-price">20k</span></div>
+        <div class="item-row"><span class="service-name">Gạt cần ( chưa có j hết)</span><span class="service-price">40k</span></div>
+        <div class="item-row"><span class="service-name">Up 1 gear</span><span class="service-price">20k</span></div>
+        <div class="item-row"><span class="service-name">Full gear</span><span class="service-price">70k</span></div>
+        <div class="item-row"><span class="service-name">Lấy 1 kiếm ở sea 3 tùy bạn chọn</span><span class="service-price">50k</span></div>
+        <div class="item-row"><span class="service-name">Lấy 1 kiếm ở sea 2 tùy bạn chọn (chỉ tính kiếm rơi từ boss)</span><span class="service-price">20k</span></div>
+        <div class="item-row"><span class="service-name">Lấy 1 kiếm ở sea 2 tùy bạn chọn (chỉ tính kiếm nhận khi làm nhiệm vụ)</span><span class="service-price">50k</span></div>
+        <div class="item-row"><span class="service-name">10 Triệu Beli</span><span class="service-price">10k</span></div>
+        <div class="item-row"><span class="service-name">50 Triệu Beli</span><span class="service-price">50k</span></div>
+        <div class="item-row"><span class="service-name">10k fragment</span><span class="service-price">20k</span></div>
+        <div class="item-row"><span class="service-name">50k fragment</span><span class="service-price">100k</span></div>
+        <div class="item-row"><span class="service-name">Cày Lẻ Beli Và Fragment </span><span class="service-price">Tùy vào đơn (1 triệu beli=1k) (1k fragment=2k)</span></div>
+        <div class="item-row"><span class="service-name">Gói Dịch Vụ Cho Newbie</span><span class="service-price">50k</span></div>
+        <div class="item-row"><span class="service-name">Gói Dịch Vụ Vip</span><span class="service-price">80k</span></div>
+        <div class="item-row"><span class="service-name">Gói Dịch Vụ Sea Event</span><span class="service-price">120k</span></div>
+        <div class="item-row"><span class="service-name">Gói Dịch Vụ Prenium</span><span class="service-price">200k</span></div>
+    </div>
+
+    <div id="phantom-section" class="list-section">
+        <div class="header-area">
+            <h2 style="color:var(--text-blue)">King Legacy Menu</h2>
+            <button class="btn-exit" onclick="closeTab()">THOÁT</button>
+        </div>
+<div class="item-row"><span class="service-name">Combo Dịch Vụ 1</span><span class="service-price">100k</span></div>
+<div class="item-row"><span class="service-name">Combo Dịch vụ 2</span><span class="service-price">200k</span></div>
+<div class="item-row"><span class="service-name">Fish V1 -> V3</span><span class="service-price">40k</span></div>
+<div class="item-row"><span class="service-name">Mink V1 -> V3</span><span class="service-price">60k</span></div>
+<div class="item-row"><span class="service-name">Human V1 -> V3</span><span class="service-price">50k</span></div>
+<div class="item-row"><span class="service-name">SeaBeast V1 -> V3</span><span class="service-price">40k</span></div>
+<div class="item-row"><span class="service-name">Sky V1 -> V3</span><span class="service-price">50k</span></div>
+<div class="item-row"><span class="service-name">Demon V1 -> V3</span><span class="service-price">70k</span></div>
+<div class="item-row"><span class="service-name">Sea 1 -> Sea 2</span><span class="service-price">20k</span></div>
+<div class="item-row"><span class="service-name">Sea 2 -> Sea 3</span><span class="service-price">40k</span></div>
+<div class="item-row"><span class="service-name">Sea 3 -> Lv Max</span><span class="service-price">60k</span></div>
+<div class="item-row"><span class="service-name">Lv 1 -> Lv Max</span><span class="service-price">100k</span></div>
+<div class="item-row"><span class="service-name">Song Kiếm</span><span class="service-price">40k</span></div>
+<div class="item-row"><span class="service-name">Muramasa / Hell Sword</span><span class="service-price">50k</span></div>
+<div class="item-row"><span class="service-name">Acrospear</span><span class="service-price">70k</span></div>
+<div class="item-row"><span class="service-name">Saber v2</span><span class="service-price">180k</span></div>
+<div class="item-row"><span class="service-name">Kioru v2</span><span class="service-price">60k</span></div>
+<div class="item-row"><span class="service-name">Phoenix Blade v2</span><span class="service-price">120k</span></div>
+<div class="item-row"><span class="service-name">Yoru v2</span><span class="service-price">90k</span></div>
+<div class="item-row"><span class="service-name">ATK v2</span><span class="service-price">60k</span></div>
+<div class="item-row"><span class="service-name">Justice Fist</span><span class="service-price">80k</span></div>
+<div class="item-row"><span class="service-name">Trickster</span><span class="service-price">80k</span></div>
+<div class="item-row"><span class="service-name">Gale Fist</span><span class="service-price">80k</span></div>
+<div class="item-row"><span class="service-name">Striker</span><span class="service-price">80k</span></div>
+<div class="item-row"><span class="service-name">Beli 60m</span><span class="service-price">20k</span></div>
+<div class="item-row"><span class="service-name">Beli 120m</span><span class="service-price">40k</span></div>
+<div class="item-row"><span class="service-name">Beli 180m</span><span class="service-price">60k</span></div>
+<div class="item-row"><span class="service-name">Beli 240m</span><span class="service-price">80k</span></div>
+<div class="item-row"><span class="service-name">Beli 300m</span><span class="service-price">100k</span></div>
+    </div>
+
+    <div id="eclipse-section" class="list-section">
+        <div class="header-area">
+            <h2 style="color:var(--text-blue)">Blox Fruit Menu Trang 2</h2>
+            <button class="btn-exit" onclick="closeTab()">THOÁT</button>
+        </div>
+        <div class="item-row"><span class="service-name">Lấy Draco</span><span class="service-price">80k</span></div>
+        <div class="item-row"><span class="service-name">Lấy Full Đai</span><span class="service-price">80k</span></div>
+        <div class="item-row"><span class="service-name">Lấy 3 Đai</span><span class="service-price">30k</span></div>
+        <div class="item-row"><span class="service-name">Lấy 6 Đai</span><span class="service-price">60k</span></div>
+        <div class="item-row"><span class="service-name">Lấy Đai Lẻ</span><span class="service-price">20k/1 đai</span></div>
+        <div class="item-row"><span class="service-name">Lấy Áo Choàng Râu Đen</span><span class="service-price">150k</span></div>
+        <div class="item-row"><span class="service-name">Lấy Tam Bảo Kiếm</span><span class="service-price">80k</span></div>
+        <div class="item-row"><span class="service-name">Lấy Skull Guitar</span><span class="service-price">50k</span></div>
+        <div class="item-row"><span class="service-name">Lấy Dragon Storm</span><span class="service-price">70k</span></div>
+        <div class="item-row"><span class="service-name">Lấy Dragon Heart</span><span class="service-price">70k</span></div>
+        <div class="item-row"><span class="service-name">Fully Sea Event Levi</span><span class="service-price">160k</span></div>
+        <div class="item-row"><span class="service-name">Fully Event Núi Lửa</span><span class="service-price">140k</span></div>
+        <div class="item-row"><span class="service-name">Fully Event Kitsune</span><span class="service-price">150k</span></div>
+        <div class="item-row"><span class="service-name">Lấy Haki Cầu Vồng</span><span class="service-price">60k</span></div>
+        <div class="item-row"><span class="service-name">Lấy Haki Quan Sát V2 (yêu cầu đã đủ điểm né)</span><span class="service-price">50k</span></div>
+        <div class="item-row"><span class="service-name">GamePass Blox Ib Tik:qthiendepzai</span><span class="service-price">LIÊN HỆ</span></div>
+    </div>
+
+    <script>
+        function openTab(name) {
+            document.getElementById('main-header').style.display = 'none';
+            document.getElementById('home-screen').style.display = 'none';
+            document.getElementById(name + '-section').style.display = 'block';
+            window.scrollTo(0,0);
+        }
+        function closeTab() {
+            const tabs = document.getElementsByClassName('list-section');
+            for (let t of tabs) t.style.display = 'none';
+            document.getElementById('main-header').style.display = 'block';
+            document.getElementById('home-screen').style.display = 'flex';
+        }
+    </script>
+</body>
+  </html>
+  
